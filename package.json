@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://afonsompp.github.io/learn-language",
   "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.592.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.19",
@@ -17,6 +18,7 @@
     "@types/node": "^16.18.97",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "aws-sdk": "^2.1637.0",
     "craco-alias": "^3.0.1",
     "gh-pages": "^6.1.1",
     "node-polyfill-webpack-plugin": "^4.0.0",
@@ -26,14 +28,13 @@
     "react-hook-form": "^7.51.5",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
-    "stream-browserify": "^3.0.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env NODE_ENV=production react-scripts start",
     "deploy": "gh-pages -d build",
-    "build": "react-scripts build",
+    "build": "cross-env NODE_ENV=production react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -56,6 +57,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.3.3"
+    "@types/react-router-dom": "^5.3.3",
+    "cross-env": "^7.0.3"
   }
 }

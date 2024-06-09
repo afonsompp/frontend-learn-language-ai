@@ -3,6 +3,7 @@ import {useForm} from "react-hook-form";
 import {Box, Button, Grid, LinearProgress} from "@mui/material";
 import {SelectField, InputField, Item, ResponsiveAppBar, SliderField, TextAreaField} from "../../shared/components";
 import Typography from "@mui/material/Typography";
+import {createBedrockClient} from "../../shared/services/BedRockClient";
 
 interface IFormInput {
     words: number
@@ -26,11 +27,19 @@ export const Home = () => {
 
 
     const onSubmit = (data: IFormInput) => {
-        setLoading(true); // Set loading state to false after the operation is complete
-        setTimeout(() => {
-            setLoading(false); // Set loading state to false after the operation is complete
-        }, 1000);
+        const bedrockClient = createBedrockClient();
+        const modelId = "meta.llama3-8b-instruct-v1:0";
+        const userMessage =
+            "Describe the purpose of a 'hello world' program in one line.";
 
+        setLoading(true);
+        bedrockClient.converse(modelId, userMessage)
+            .then((responseText) => {
+                console.log("Response:", responseText);
+            })
+            .catch((err) => {
+                console.error("Error:", err.message);
+            }).finally(() => { setLoading(false); });
     }
 
     return (
@@ -89,7 +98,7 @@ export const Home = () => {
                                 defaultValue={1000}
                                 min={100}
                                 step={100}
-                                max={3000} />
+                                max={3000}/>
                         </Item>
                     </Grid>
                     <Grid xs={12}>
