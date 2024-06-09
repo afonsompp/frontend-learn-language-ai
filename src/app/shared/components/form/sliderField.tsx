@@ -1,9 +1,6 @@
 import React from 'react';
 import {Controller, Control} from 'react-hook-form';
-import TextField from '@mui/material/TextField';
-import Typography from "@mui/material/Typography";
 import {Slider} from "@mui/material";
-import MenuItem from "@mui/material/MenuItem";
 
 interface SliderFieldProps {
     name: string,
