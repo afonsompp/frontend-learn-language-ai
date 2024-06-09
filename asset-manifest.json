@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/learn-language/static/js/main.bfd41e0a.js",
+    "main.js": "/learn-language/static/js/main.b5f84b8f.js",
     "static/js/845.14e8744e.chunk.js": "/learn-language/static/js/845.14e8744e.chunk.js",
     "index.html": "/learn-language/index.html",
-    "main.bfd41e0a.js.map": "/learn-language/static/js/main.bfd41e0a.js.map",
+    "main.b5f84b8f.js.map": "/learn-language/static/js/main.b5f84b8f.js.map",
     "845.14e8744e.chunk.js.map": "/learn-language/static/js/845.14e8744e.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.bfd41e0a.js"
+    "static/js/main.b5f84b8f.js"
   ]
 }
