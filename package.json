@@ -2,6 +2,7 @@
   "name": "quick-learn-lenguages",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://afonsompp.github.io/learn-language",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -17,6 +18,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "craco-alias": "^3.0.1",
+    "gh-pages": "^6.1.1",
     "node-polyfill-webpack-plugin": "^4.0.0",
     "react": "^18.3.1",
     "react-app-rewired": "^2.2.1",
@@ -30,6 +32,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

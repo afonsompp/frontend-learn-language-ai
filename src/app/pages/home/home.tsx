@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import {useForm} from "react-hook-form";
-import {Box, Button, Grid, LinearProgress, Slider} from "@mui/material";
+import {Box, Button, Grid, LinearProgress} from "@mui/material";
 import {SelectField, InputField, Item, ResponsiveAppBar, SliderField, TextAreaField} from "../../shared/components";
 import Typography from "@mui/material/Typography";
-import {generateText} from "../../shared/services/TextGeneratorService";
 
 interface IFormInput {
     words: number
@@ -113,6 +112,7 @@ export const Home = () => {
                             {loading && <LinearProgress/>}
                         </Item>
                     </Grid>
+
                 </Grid>
             </Box>
         </div>
