@@ -27,19 +27,10 @@ export const Home = () => {
 
 
     const onSubmit = (data: IFormInput) => {
-        const bedrockClient = createBedrockClient();
-        const modelId = "meta.llama3-8b-instruct-v1:0";
-        const userMessage =
-            "Describe the purpose of a 'hello world' program in one line.";
-
         setLoading(true);
-        bedrockClient.converse(modelId, userMessage)
-            .then((responseText) => {
-                console.log("Response:", responseText);
-            })
-            .catch((err) => {
-                console.error("Error:", err.message);
-            }).finally(() => { setLoading(false); });
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
     }
 
     return (

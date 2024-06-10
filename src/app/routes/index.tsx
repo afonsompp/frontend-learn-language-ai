@@ -5,7 +5,7 @@ export const AppRouter = () => {
     return (
         <Router>
             <Routes>
-                <Route path={"/learn-language"} element={<Home/>}/>
+                <Route path={"/"} element={<Home/>}/>
             </Routes>
         </Router>
     )
