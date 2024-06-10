@@ -2,7 +2,6 @@
   "name": "quick-learn-lenguages",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://afonsompp.github.io/learn-language",
   "dependencies": {
     "@aws-sdk/client-bedrock-runtime": "^3.592.0",
     "@emotion/react": "^11.11.4",
