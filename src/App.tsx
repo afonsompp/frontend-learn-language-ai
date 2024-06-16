@@ -13,6 +13,8 @@ function App() {
     <Auth0Provider
       domain={oauth_domain}
       clientId={oauth_client_id}
+      useRefreshTokens={true}
+      cacheLocation="localstorage"
       authorizationParams={{
         redirect_uri: window.location.origin,
         audience: oauth_audience,
