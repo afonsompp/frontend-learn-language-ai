@@ -2,6 +2,7 @@ import { RouteObject } from 'react-router-dom'
 
 import { RootWithAppBar } from '@/components/templates/root'
 import HomePage from '@/presentation/pages/home'
+import PlaygroundPage from '@/presentation/pages/playground'
 
 export const routes: RouteObject[] = [
   {
@@ -11,6 +12,10 @@ export const routes: RouteObject[] = [
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: 'playground',
+        element: <PlaygroundPage />,
       },
     ],
   },

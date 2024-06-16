@@ -1,9 +1,14 @@
+import { useAuth0 } from '@auth0/auth0-react'
 import { Outlet } from 'react-router-dom'
 
+import { LoginButton } from '@/components/atoms/login-button'
+import { LogoutButton } from '@/components/atoms/logout-button'
 import { AppbarNavigation } from '@/components/organisms/appbar-navigation'
 import { ModeToggle } from '@/components/organisms/theme/mode-toggle.tsx'
 
 export function RootWithAppBar() {
+  const { isAuthenticated } = useAuth0()
+
   return (
     <div className={'w-full'}>
       <div className={'flex justify-between w-full h-full px-4 py-3'}>
@@ -15,7 +20,12 @@ export function RootWithAppBar() {
           <AppbarNavigation />
         </div>
 
-        <ModeToggle />
+        <div className={'flex gap-5'}>
+          {isAuthenticated && <LogoutButton />}
+          {!isAuthenticated && <LoginButton />}
+
+          <ModeToggle />
+        </div>
       </div>
 
       <div
